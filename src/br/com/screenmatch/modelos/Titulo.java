@@ -10,12 +10,19 @@ public class Titulo {
     private int evaluationCounter;
 
     /* -------------------------------------------------------------------- */
+    public Titulo(String name, int releaseYear) {
+        this.name = name;
+        this.releaseYear = releaseYear;
+    }
+
     public float getAverage() {
         return average;
     }
+
     public int getTittleLenght() {
         return tittleLenght;
     }
+
     public void setReleaseYear(int releaseYear) {
         this.releaseYear = releaseYear;
     }
@@ -32,6 +39,10 @@ public class Titulo {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void datasheet(){
         System.out.println("Nome do título: " + name);
         System.out.println("Ano de lançamento: " + releaseYear);
@@ -39,9 +50,11 @@ public class Titulo {
         System.out.println("Duração do título: " + this.getTittleLenght() + " min");
         System.out.println("Avaliação do título: " + average);
     }
+
     public void calculaMedia(){
         this.average = evaluationAmount/evaluationCounter;
     }
+
     public void evaluate(float evaluation){
         evaluationAmount += evaluation;
         evaluationCounter++;

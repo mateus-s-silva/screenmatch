@@ -2,14 +2,15 @@ package br.com.screenmatch.modelos;
 
 import br.com.screenmatch.calculos.Classificavel;
 
-public class Episode extends Serie implements Classificavel {
-    private int number;
+public class Episode implements Classificavel {
+    private int numberOfEpisode;
     private String nameOfEpisose;
     private String serie;
     private int totalVisualizacoes;
 
-    public Episode(int number) {
-        this.number = number;
+
+    public Episode(int numberOfEpisode) {
+        this.numberOfEpisode = numberOfEpisode;
     }
 
     public int getTotalVisualizacoes() {

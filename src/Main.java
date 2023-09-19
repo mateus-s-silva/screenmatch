@@ -4,16 +4,18 @@ import br.com.screenmatch.modelos.Episode;
 import br.com.screenmatch.modelos.Movie;
 import br.com.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
-        Movie coolMovie = new Movie();
+        Movie coolMovie = new Movie("Cidade de Deus", 1999);
         FiltroRecomendacao filtro = new FiltroRecomendacao();
-        Serie friends = new Serie();
+        Serie friends = new Serie("Friends", 2003);
         TimeCalculator calculadora = new TimeCalculator();
 
-        coolMovie.setName("Cidade de Deus");
-        coolMovie.setReleaseYear(1999);
+        // coolMovie.setName("Cidade de Deus");
+        // coolMovie.setReleaseYear(1999);
         coolMovie.setTittleLenght(200);
 
         coolMovie.evaluate(10);
@@ -25,8 +27,8 @@ public class Main {
         filtro.filtra(coolMovie);
 
 
-        friends.setName("Friends");
-        friends.setReleaseYear(2000);
+        //friends.setName("Friends");
+        //friends.setReleaseYear(2000);
         friends.setSeasons(10);
         friends.setMinutesPerEpisode(22);
         friends.setEpisodes(10);
@@ -41,6 +43,20 @@ public class Main {
         episodio.setTotalVisualizacoes(300);
 
         filtro.filtra(episodio);
+
+        var newMovie = new Movie("Dogville", 2003);
+        newMovie.setTittleLenght(200);
+        //newMovie.setName("Dogville");
+        //newMovie.setReleaseYear(2003);
+        newMovie.evaluate(9.2F);
+
+        ArrayList<Movie> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(newMovie);
+        listaDeFilmes.add(coolMovie);
+
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getName());
+        System.out.println(listaDeFilmes);
 
     }
 }
