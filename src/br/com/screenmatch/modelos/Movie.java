@@ -23,6 +23,6 @@ public class Movie extends Titulo implements Classificavel {
 
     @Override
     public String toString() {
-        return "Filme: " + this.getName();
+        return this.getName();
     }
 }

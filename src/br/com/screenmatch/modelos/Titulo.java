@@ -1,12 +1,13 @@
 package br.com.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     private String name;
     private int releaseYear;
     private boolean includedInAssignature;
     private float evaluationAmount;
     private float average;
     private int tittleLenght;
+
     private int evaluationCounter;
 
     /* -------------------------------------------------------------------- */
@@ -21,6 +22,10 @@ public class Titulo {
 
     public int getTittleLenght() {
         return tittleLenght;
+    }
+
+    public int getReleaseYear() {
+        return releaseYear;
     }
 
     public void setReleaseYear(int releaseYear) {
@@ -58,5 +63,9 @@ public class Titulo {
     public void evaluate(float evaluation){
         evaluationAmount += evaluation;
         evaluationCounter++;
+    }
+    @Override
+    public int compareTo(Titulo o) {
+        return this.getName().compareTo(o.getName());
     }
 }
