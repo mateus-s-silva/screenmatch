@@ -60,7 +60,7 @@ public class mainWithList {
         Collections.sort(lista);
 
         System.out.println(lista);
-ndo
+
         lista.sort(Comparator.comparing(Titulo::getReleaseYear));
 
         System.out.println(lista);
