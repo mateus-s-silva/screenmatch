@@ -1,10 +1,12 @@
 package br.com.screenmatch.principal;
 
+import br.com.screenmatch.calculos.Classificavel;
 import br.com.screenmatch.calculos.FiltroRecomendacao;
 import br.com.screenmatch.calculos.TimeCalculator;
 import br.com.screenmatch.modelos.Episode;
 import br.com.screenmatch.modelos.Movie;
 import br.com.screenmatch.modelos.Serie;
+import br.com.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 

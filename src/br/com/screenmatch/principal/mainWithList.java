@@ -5,10 +5,7 @@ import br.com.screenmatch.modelos.Serie;
 import br.com.screenmatch.modelos.Titulo;
 
 import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class mainWithList {
     public static void main(String[] args) {
@@ -46,7 +43,7 @@ public class mainWithList {
             }
         }
 
-        ArrayList<String> buscaPorArtista = new ArrayList<String>();
+        List<String> buscaPorArtista = new ArrayList<String>();
         buscaPorArtista.add("Matue");
         buscaPorArtista.add("Evoney");
         buscaPorArtista.add("Igor Bz");
