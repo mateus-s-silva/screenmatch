@@ -1,9 +1,12 @@
 package br.com.screenmatch.modelos;
 
+import br.com.screenmatch.exception.ErroDeConversaoDeAnoException;
+
 public class Titulo implements Comparable<Titulo>{
-    private String name;
+    private String nome;
     private int releaseYear;
     private boolean includedInAssignature;
+
     private float evaluationAmount;
     private float average;
     private int tittleLenght;
@@ -11,8 +14,8 @@ public class Titulo implements Comparable<Titulo>{
     private int evaluationCounter;
 
     /* -------------------------------------------------------------------- */
-    public Titulo(String name, int releaseYear) {
-        this.name = name;
+    public Titulo(String nome, int releaseYear) {
+        this.nome = nome;
         this.releaseYear = releaseYear;
     }
 
@@ -40,16 +43,16 @@ public class Titulo implements Comparable<Titulo>{
         this.tittleLenght = tittleLenght;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
     public void datasheet(){
-        System.out.println("Nome do título: " + name);
+        System.out.println("Nome do título: " + nome);
         System.out.println("Ano de lançamento: " + releaseYear);
         System.out.println("Incluso no seu plano: " + includedInAssignature);
         System.out.println("Duração do título: " + this.getTittleLenght() + " min");
@@ -66,6 +69,6 @@ public class Titulo implements Comparable<Titulo>{
     }
     @Override
     public int compareTo(Titulo o) {
-        return this.getName().compareTo(o.getName());
+        return this.getNome().compareTo(o.getNome());
     }
 }

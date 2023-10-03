@@ -4,7 +4,6 @@ import br.com.screenmatch.modelos.Movie;
 import br.com.screenmatch.modelos.Serie;
 import br.com.screenmatch.modelos.Titulo;
 
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class mainWithList {
@@ -27,7 +26,7 @@ public class mainWithList {
         lista.add(lost);
 
         for (Titulo item: lista) {
-            System.out.println(item.getName());
+            System.out.println(item.getNome());
             if(item.getClass() == Movie.class && ((Movie) item).getClassificacao() > 2){
                 /*
                  Aqui eu poderia ter utilizado "item instanceof Filme" no 'if', mas resolvi testar isso

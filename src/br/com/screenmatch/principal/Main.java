@@ -1,12 +1,10 @@
 package br.com.screenmatch.principal;
 
-import br.com.screenmatch.calculos.Classificavel;
 import br.com.screenmatch.calculos.FiltroRecomendacao;
 import br.com.screenmatch.calculos.TimeCalculator;
 import br.com.screenmatch.modelos.Episode;
 import br.com.screenmatch.modelos.Movie;
 import br.com.screenmatch.modelos.Serie;
-import br.com.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 
@@ -59,7 +57,7 @@ public class Main {
         listaDeFilmes.add(coolMovie);
 
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
-        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getName());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
 
     }
